@@ -53,7 +53,7 @@ Ele gera 3 arquivos:
 ### Sobre USX Bible
 #### O Gerador de Bíblias.
 
-USX Bible é responsável por gerar uma Bíblia em Portugês para o ProPresenter 7, já que não há uma de graça nesse idioma (e eu não tava afim de usar dois aplicativos de apresentação só por causa disso).
+USX Bible é responsável por gerar uma Bíblia em Portugês para o ProPresenter 7 (o processo gira em torno de 20min.), já que não há uma de graça nesse idioma (e eu não tava afim de usar dois aplicativos de apresentação só por causa disso).
 
 **Como eu já gerei, apenas me envie um e-mail (mirandadavi.mt@gmail.com) e eu contentemente enviá-lo-ei a Bíblia compactada.**
 
@@ -125,8 +125,6 @@ USX Bible é responsável por gerar uma Bíblia em Portugês para o ProPresenter
      ...
 </usx>
 ```
-
-* O arquivo *generateUSXBookFile* é feito para gerar o arquivo de um livro por vez e só depende dele mesmo. O arquivo *generateUSXBible* gera toda a Bíblia de uma vez (20min. de operação, em média, no total) e depende do arquivo *Bible*.
  
 #### Histórico de problemas:
 ##### Não-resolvidos
