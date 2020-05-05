@@ -4,6 +4,18 @@ Se você quiser a Bíblia em português (ACF) para usar no ProPresenter 7 (não 
 
 ---
 
+### Sumário
+
+* Dependências
+* Sobre *Song Lyrics, o Gerador de Hinos*
+  * Como funciona
+* Sobre *USX Bible, o Gerador de Bíblias*
+  * Passo a passo de como instalar a Bíblia (na tradução português do Brasil)
+  * Como funciona
+  * Histórico de bugs
+
+---
+
 ### Dependências
 
 - [Python 3.8.2](https://www.python.org/downloads/release/python-382/)
@@ -40,60 +52,80 @@ USX Bible é responsável por gerar uma Bíblia em Portugês para o ProPresenter
 
 #### Passo a passo de como instalar a Bíblia:
 
-  1.1 No ProPresenter 7, baixar qualquer Bíblia grátis (KJV, no meu caso) para gerar o token de validação do próprio progama (o nome da pasta em C:\ProgramData\RenewedVision\ProPresenter\Bibles e a entrada no BiblieData.proPref). Não consegui criar um.
+1. Abra o ProPresenter e vá na aba de *Bible*, depois em *Options*, *Bible* novamente, *Free*, e, então, *Install* (de preferência na King James Version, não testei nas demais):
 
-  1.2 Para mudar o título que você seleciona no menu Bible do ProPresenter, vá no arquivo rvmetadata.xml e altere aqui: 
+![](USX%20Bible/img/usxbible_00.png)
+
+2. Uma vez instalada, você pode perceber que está, obviamente, tudo em inglês:
+
+![](USX%20Bible/img/usxbible_01.png)
+
+3. Feche o ProPresenter, e vá na pasta oculta do ProPresenter. No meu caso, está no disco C:.
+  * C:\ProgramData\RenewedVision\ProPresenter\Bibles
+  * Numa instalação limpa, a pasta Bibles está vazia, execto pelo arquivo *BibleData.proPref* com o conteúdo *InstalledBibles=[];*
+  * Agora, perceba que há uma pasta com um nome estranho (provavelmente uma chave de validação) e o arquivo *BibleData.proPref* com o conteúdo *InstalledBibles=[nome_da_pasta|abreviação_da_tradução|nome_da_tradução|não_sei];*
   
-      <name>King James Version</name>
+![](USX%20Bible/img/usxbible_02.png)
 
-      1.2.1 Não recomendo mudar o <abbreviation>KJV</abbreviation>, pois é causa entrada dupla na seleção de versão, aparentemente. Não é ele que muda o Display Translation, nem procurei achar qual muda.
+4. Agora basta extrair o arquivo compactado que eu vos enviei/enviarei dentro da pasta gerada e substituir tudo no processo.
 
-  1.3. No arquivo metadata.xml temos os nomes dos livros:
-  
-      <bookNames>
-          <book code="GEN">
-              <long>Genesis</long>
-              <short>Genesis</short>
-              <abbr>Genesis</abbr>
-          </book>
-          ...
-      </bookNames>
+![](USX%20Bible/img/usxbible_03.png)
 
-      1.3.1 O book code é o nome do arquivo .usx que ele vai procurar na pasta USX.
+5. Abra o ProPresenter novamente e perceba que funcionou!
 
-      1.3.2 O long, short e abbr são o nome que aparece para selecionar no menu Bible do ProPresenter e que aparece no slide.
+![](USX%20Bible/img/usxbible_04.png)
 
-  1.4. Cada livro da Bíblia tem um arquivo na pasta USX, são eles que estaremos traduzindo. Esse é o formato:
-  
-      <?xml version="1.0" encoding="utf-8"?>
-      <usx version="2.0">
-          <book code="TIT" style="id">Titus</book>
-          <para style="mt">Titus</para>
+#### Como funciona
 
-          <chapter number="1" style="c" />
-              <para style="p">
-                  <verse number="1" style="v" />...</para>
-              <para style="p">
-                  <verse number="2" style="v" />...</para>
-                  ...
-          <chapter number="2" style="c" />
-              <para style="p">
-                  <verse number="1" style="v" />...</para>
-                  ...
-      </usx>
+* Para mudar o título que você seleciona no menu Bible do ProPresenter, vá no arquivo rvmetadata.xml e altere aqui: 
+```
+<name>King James Version</name>
+```
+  * Não recomendo mudar o <abbreviation>KJV</abbreviation>, pois é causa entrada dupla na seleção de versão, aparentemente. Não é ele que muda o Display Translation, nem procurei achar qual muda.
 
-  1.5 O arquivo generateUSXBookFile é feito para gerar o arquivo de um livro por vez e só depende dele mesmo. O arquivo generateUSXBible gera toda a Bíblia de uma vez (20min. de operação, em média, no total) e depende do arquivo Bible.
+* No arquivo metadata.xml temos os nomes dos livros:
+```  
+<bookNames>
+    <book code="GEN">
+        <long>Genesis</long>
+        <short>Genesis</short>
+        <abbr>Genesis</abbr>
+    </book>
+    ...
+</bookNames>
+```
+
+  * O *book code* é o nome do arquivo .usx que ele vai procurar na pasta USX.
+  * O *long*, *short* e *abbr* são o nome que aparece para selecionar no menu Bible do ProPresenter e na referência do slide.
+
+* Cada livro da Bíblia tem um arquivo na pasta USX, são eles que estaremos traduzindo. Esse é o formato:
+```
+<?xml version="1.0" encoding="utf-8"?>
+<usx version="2.0">
+    <book code="TIT" style="id">Titus</book>
+    <para style="mt">Titus</para>
+
+    <chapter number="1" style="c" />
+        <para style="p">
+            <verse number="1" style="v" />...</para>
+        <para style="p">
+            <verse number="2" style="v" />...</para>
+         ...
+    <chapter number="2" style="c" />
+        <para style="p">
+            <verse number="1" style="v" />...</para>
+         ...
+     ...
+</usx>
+```
+
+* O arquivo *generateUSXBookFile* é feito para gerar o arquivo de um livro por vez e só depende dele mesmo. O arquivo *generateUSXBible* gera toda a Bíblia de uma vez (20min. de operação, em média, no total) e depende do arquivo *Bible*.
  
- ---
- 
-Histórico de bugs:
+#### Histórico de bugs:
 
-- Versículos começando com ',' (vírgula) faziam o ProPresenter crashar. 
-  - (resolvido na formatação)
+* System.Exception: Error while trying to retrieve the Books for this Bible. ---> System.Xml.XmlException: Um nome não pode ser iniciado pelo caractere ',', valor hexadecimal 0x2C. Linha 8, posição 39.
+  * Ou seja, versículos começando com ',' (vírgula) faziam o ProPresenter crashar. 
+    * Resolvido na formatação, ao escrever no arquivo gerado.
 
-- Livros enumerados como 1CO/2CO ou 1TI/2TI têm seus versos de acordo com sua numeração, no qual o primeiro dígito da esquerda corresponde a numeração do livro e os demais da direita ao versículo, isto é:
-  - 1CO: 11, 12, 13
-  - 2CO: 21, 22, 23
-  - (resolvido na linha 10, pegar o capitulo da url[-3:])
-  
-  
+* Livros enumerados como 1CO/2CO ou 1TI/2TI têm seus versos de acordo com sua numeração, no qual o primeiro dígito da esquerda corresponde a numeração do livro e os demais da direita ao versículo, isto é, 1CO:11, 12, 13; 2CO:21, 22, 23.
+  * Resolvido na linha 10, para pegar o número do capítulo eu extraio todos os números da URL, mas isso significa extrair também os números do livro, caso tenham (1-reis, 1-corintios), então, ao pegar o capitulo da url, usar o sufixo [-3:] na string, para considerar apenas os 3 últimos caracteres.
