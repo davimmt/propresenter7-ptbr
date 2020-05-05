@@ -1,10 +1,10 @@
-## Sobre a Bíblia na versão Português do Brasil (ACF) para o ProPresenter 7
+### Sobre a Bíblia na versão Português do Brasil (ACF) para o ProPresenter 7
 
 Se você quiser a Bíblia em português (ACF) para usar no ProPresenter 7 (não sei sobre a compatibilidade em outras versões), mande um email para mirandadavi.mt@gmail.com que eu te envio o .zip. Extraia dentro da pasta da Bíblia grátis gerada pelo aplicativo, substituindo tudo.
 
 ---
 
-## Dependências
+### Dependências
 
 - [Python 3.8.2](https://www.python.org/downloads/release/python-382/)
 - [pip3](https://pip.pypa.io/en/stable/)
@@ -17,15 +17,20 @@ Se você quiser a Bíblia em português (ACF) para usar no ProPresenter 7 (não 
 
 ---
 
-## Sobre Song Lyrics
+### Sobre Song Lyrics
+O gerador de hinos.
 
-Song Lyrics gera .pptx e .docx + .txt (ambos para importar pro ProPresenter).
-  - .docx => ProPresenter 7
-  - .txt => ProPresenter 6
+Song Lyrics é um programa responsável por gerar arquivos com a letra do hino de sua escolha, basta você informar a URL (tem que ser do site letras.mus.br). 
+
+Ele gera 3 arquivos:
+  - .pptx => Apresentação de Slides em PowerPoint
+  - .docx => Arquivo de importação para o ProPresenter 7
+  - .txt => Arquivo de importação para o ProPresenter 6
   
 ---
 
-## Sobre USX Bible
+### Sobre USX Bible
+O gerador de Bíblias.
 
 1. Generate USX Bible é para gerar uma Bíblia em Portugês para o ProPresenter 7, já que não há uma de graça.
 
