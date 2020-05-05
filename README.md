@@ -8,17 +8,12 @@ Se você quiser a Bíblia em português (ACF) para usar no ProPresenter 7 (não 
   - BeautifulSoup
   - unidecode
   - requests
-  - urllib
   - python-docx
   - python-pptx
-  - pynput (somente para Slide Timer)
 
+---
 
-- Slide Timer abandonado, não uso mais o programa que funcionava com ele.
-- Song Lyrics é a versão antiga, com o .docx para importar ao PowerPoint, sem ProPresenter 7.
-- Song Lyrics 2 é a versão só .docx para o  ProPresenter 7.
-
-- Song Lyrics 3 é o mais novo e completo, gerando .pptx e .docx + .txt (ambos para importar pro ProPresenter).
+- Song Lyrics gera .pptx e .docx + .txt (ambos para importar pro ProPresenter).
   - .docx => ProPresenter 7
   - .txt => ProPresenter 6
 
