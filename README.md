@@ -12,7 +12,7 @@ Se você quiser a Bíblia em português (ACF) para usar no ProPresenter 7 (não 
 * Sobre *USX Bible, o Gerador de Bíblias*
   * Passo a passo de como instalar a Bíblia (na tradução português do Brasil)
   * Como funciona
-  * Histórico de bugs
+  * Histórico de problemas
 
 ---
 
@@ -121,8 +121,12 @@ USX Bible é responsável por gerar uma Bíblia em Portugês para o ProPresenter
 
 * O arquivo *generateUSXBookFile* é feito para gerar o arquivo de um livro por vez e só depende dele mesmo. O arquivo *generateUSXBible* gera toda a Bíblia de uma vez (20min. de operação, em média, no total) e depende do arquivo *Bible*.
  
-#### Histórico de bugs:
+#### Histórico de problemas:
+##### Não-resolvidos
+* [Isaías 51:6](https://biblia.blog.br/acf/livro/isaias/51/6) está com o versículo incompleto. É problema com o site, não com o programa em si.
+  * Parte que falta: *justiça não será abolida.*
 
+##### Resolvidos
 * System.Exception: Error while trying to retrieve the Books for this Bible. ---> System.Xml.XmlException: Um nome não pode ser iniciado pelo caractere ',', valor hexadecimal 0x2C. Linha 8, posição 39.
   * Ou seja, versículos começando com ',' (vírgula) faziam o ProPresenter crashar. 
     * Resolvido na formatação, ao escrever no arquivo gerado.
