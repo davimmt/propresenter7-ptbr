@@ -36,7 +36,7 @@ Ele gera 3 arquivos:
 
 USX Bible é responsável por gerar uma Bíblia em Portugês para o ProPresenter 7, já que não há uma de graça nesse idioma (e eu não tava afim de usar dois aplicativos de apresentação só por causa disso).
 
-Como eu já gerei, apenas me envie um e-mail e eu enviá-lo-ei a Bíblia compactada.
+**Como eu já gerei, apenas me envie um e-mail (mirandadavi.mt@gmail.com) e eu contentemente enviá-lo-ei a Bíblia compactada.**
 
 #### Passo a passo de como instalar a Bíblia:
 
