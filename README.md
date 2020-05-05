@@ -85,9 +85,10 @@ USX Bible é responsável por gerar uma Bíblia em Portugês para o ProPresenter
 #### Como funciona
 
 * Para trocar a tradução, vá na linha 54 do arquivo *USX Biblie/main/generateUSXBible*:
-```fileName = Book().getInfo("https://www.bibliaonline.com.br/acf/" + Bible().getBooksPtBRName(i) + "/" + str(j), Bible().getBooksName(i), Bible().getBooksAbbreviation(i))
-```
   * Aonde tem o link *"https://www.bibliaonline.com.br/acf/*" troque o *acf* pelas as versões suportadas da página.
+```
+fileName = Book().getInfo("https://www.bibliaonline.com.br/acf/" + Bible().getBooksPtBRName(i) + "/" + str(j), Bible().getBooksName(i), Bible().getBooksAbbreviation(i))
+```
 
 * Para mudar o título que você seleciona no menu Bible do ProPresenter, vá no arquivo rvmetadata.xml e altere aqui: 
 ```
