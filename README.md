@@ -1,21 +1,31 @@
+## Sobre a Bíblia na versão Português do Brasil (ACF) para o ProPresenter 7
+
 Se você quiser a Bíblia em português (ACF) para usar no ProPresenter 7 (não sei sobre a compatibilidade em outras versões), mande um email para mirandadavi.mt@gmail.com que eu te envio o .zip. Extraia dentro da pasta da Bíblia grátis gerada pelo aplicativo, substituindo tudo.
-
-- Para usar os códigos, você precisa:
-
-  - Python 3.8.2+
-
-- Dentro do Python, você precisa usar o pip3 install para ter os seguintes pacotes:
-  - BeautifulSoup
-  - unidecode
-  - requests
-  - python-docx
-  - python-pptx
 
 ---
 
-- Song Lyrics gera .pptx e .docx + .txt (ambos para importar pro ProPresenter).
+## Dependências
+
+- [Python 3.8.2](https://www.python.org/downloads/release/python-382/)
+- [pip3](https://pip.pypa.io/en/stable/)
+  - [BeautifulSoup 4](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+  - [unidecode](https://pypi.org/project/Unidecode/)
+  - [requests](https://requests.readthedocs.io/en/latest/)
+  - [urllib 3](https://docs.python.org/3/library/urllib.html)
+  - [python-docx](https://python-docx.readthedocs.io/en/latest/)
+  - [python-pptx](https://python-pptx.readthedocs.io/en/latest/)
+
+---
+
+## Sobre Song Lyrics
+
+Song Lyrics gera .pptx e .docx + .txt (ambos para importar pro ProPresenter).
   - .docx => ProPresenter 7
   - .txt => ProPresenter 6
+  
+---
+
+## Sobre USX Bible
 
 1. Generate USX Bible é para gerar uma Bíblia em Portugês para o ProPresenter 7, já que não há uma de graça.
 
