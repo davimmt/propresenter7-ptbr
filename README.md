@@ -81,7 +81,7 @@ USX Bible é responsável por gerar uma Bíblia em Portugês para o ProPresenter
 ```
 <name>King James Version</name>
 ```
-  * Não recomendo mudar o <abbreviation>KJV</abbreviation>, pois é causa entrada dupla na seleção de versão, aparentemente. Não é ele que muda o Display Translation, nem procurei achar qual muda.
+  * Não recomendo mudar o *\<abbreviation>KJV\</abbreviation>*, pois causa entrada dupla na seleção de versão, aparentemente. Não é ele que muda o texto da Display Translation, nem procurei achar qual muda.
 
 * No arquivo metadata.xml temos os nomes dos livros:
 ```  
