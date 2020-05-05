@@ -8,7 +8,7 @@ Se você quiser a Bíblia em português (ACF) para usar no ProPresenter 7 (não 
 
 * Dependências
 * Sobre *Song Lyrics, o Gerador de Hinos*
-  * Como funciona
+  * ~Como funciona (não feito ainda)~
 * Sobre *USX Bible, o Gerador de Bíblias*
   * Passo a passo de como instalar a Bíblia (na tradução português do Brasil)
   * Como funciona
