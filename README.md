@@ -1,6 +1,6 @@
 ### Sobre a Bíblia na versão Português do Brasil (ACF) para o ProPresenter 7
 
-Se você quiser a Bíblia em português (ACF) para usar no ProPresenter 7 (não sei sobre a compatibilidade em outras versões), mande um email para mirandadavi.mt@gmail.com que eu te envio o .zip. Extraia dentro da pasta da Bíblia grátis gerada pelo aplicativo, substituindo tudo.
+Se você quiser a Bíblia em português (ACF) para usar no ProPresenter 7 (não sei sobre a compatibilidade em outras versões), mande um email para mirandadavi.mt@gmail.com que eu te envio os arquivos da Bíblia compactados. Mais informações abaixo.
 
 ---
 
@@ -18,21 +18,27 @@ Se você quiser a Bíblia em português (ACF) para usar no ProPresenter 7 (não 
 ---
 
 ### Sobre Song Lyrics
-O gerador de hinos.
+#### O Gerador de Hinos.
 
-Song Lyrics é um programa responsável por gerar arquivos com a letra do hino de sua escolha, basta você informar a URL (tem que ser do site letras.mus.br). 
+Song Lyrics é um programa responsável por ~facilitar a vida de quem faz muito slide de música pra Igreja~ gerar arquivos com a letra do hino (ou qualquer música do site indicado) de sua escolha, basta você informar sua URL.
+
+**A URL tem que ser do site letras.mus.br.**
 
 Ele gera 3 arquivos:
   - .pptx => Apresentação de Slides em PowerPoint
   - .docx => Arquivo de importação para o ProPresenter 7
   - .txt => Arquivo de importação para o ProPresenter 6
-  
+
 ---
 
 ### Sobre USX Bible
-O gerador de Bíblias.
+#### O Gerador de Bíblias.
 
-1. Generate USX Bible é para gerar uma Bíblia em Portugês para o ProPresenter 7, já que não há uma de graça.
+USX Bible é responsável por gerar uma Bíblia em Portugês para o ProPresenter 7, já que não há uma de graça nesse idioma (e eu não tava afim de usar dois aplicativos de apresentação só por causa disso).
+
+Como eu já gerei, apenas me envie um e-mail e eu enviá-lo-ei a Bíblia compactada.
+
+#### Passo a passo de como instalar a Bíblia:
 
   1.1 No ProPresenter 7, baixar qualquer Bíblia grátis (KJV, no meu caso) para gerar o token de validação do próprio progama (o nome da pasta em C:\ProgramData\RenewedVision\ProPresenter\Bibles e a entrada no BiblieData.proPref). Não consegui criar um.
 
