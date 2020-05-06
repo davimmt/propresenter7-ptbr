@@ -60,7 +60,7 @@ USX Bible é responsável por gerar uma Bíblia em Portugês para o ProPresenter
 
 #### Passo a passo de como instalar a Bíblia:
 
-1. Abra o ProPresenter e vá na aba de *Bible*, depois em *Options*, *Bible* novamente, *Free*, e, então, *Install* (de preferência na King James Version, não testei nas demais):
+1. Abra o ProPresenter e vá na aba de *Bible*, depois em *Options*, *Bible* novamente, *Free*, e, então, *Install* (de preferência na King James Version, pode ser qualquer uma que tenha o formato USX):
 
 ![](USX%20Bible/img/usxbible_00.png)
 
