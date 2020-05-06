@@ -2,9 +2,7 @@ from Bible import Bible
 from Book import Book
 
 def inputChoices(i):
-
-    versionChoice = "\n[1] Almeida Corrigida e Fiel (ACF)\n[2] Nova Versão Internacional (NVI)\n\nEscolha a versão (padrão = 1): "
-
+    versionChoice = "\n[1] Almeida Corrigida e Fiel (ACF)\n[2] Nova Versão Internacional (NVI)\n[3] Almeida Revista e Atualizada (ARA)\n[4] Nova Almeida Atualizada (NAA)\n\nEscolha a versão (padrão = 1): "
     rangeChoice = "\n[1] Toda Bíblia\n[2] Velho Testamento\n[3] Novo Testamento\n[4] Pentateuco\n[5] Profetas Maiores\n[6] Evangelhos\n[7] Epístolas de Paulo\n[8] Salmos e Provérbios\n\nVocê quer gerar (padrão = 1): "
 
     if i == 0: return versionChoice
@@ -15,6 +13,8 @@ def inputMain():
         inputVersion = int(input(inputChoices(0)))
         if inputVersion == 1: returnVersion = "acf"
         if inputVersion == 2: returnVersion = "nvi"
+        if inputVersion == 3: returnVersion = "ara"
+        if inputVersion == 4: returnVersion = "naa"
     except:
        returnVersion = "acf"
     

@@ -5,10 +5,10 @@ Se você quiser a Bíblia em português para usar no ProPresenter 7 (não sei so
 As versões de tradução podem ser:
 * Almeida Corrigida Fiel (ACF)
 * Nova Versão Internacional (NVI)
-* ~Almeida Revista e Atualizada (ARA)~
-* ~Almeida Revista e Corrigida (ARC)~
-* ~Nova Almeida Atualizada (NAA)~
-  * Para gerar a Bíblia, eu uso o site https://www.bibliaonline.com.br/, mas a estrutura da página muda por cada versão, então as traduções riscadas estão *indisponíveis* no momento.
+* Almeida Revista e Atualizada (ARA)
+* Almeida Revista e Corrigida (ARC)
+* Nova Almeida Atualizada (NAA)
+  * Para gerar a Bíblia, eu uso o site https://www.bibliaonline.com.br/, qualquer tradução de lá é passível de ser usada, mas essas 4 são a mainstream.
   
 ---
 
@@ -369,5 +369,9 @@ USX Bible é responsável por gerar uma Bíblia em Portugês para o ProPresenter
   * O site entende o retorno de Daniel do array como danth (bug, provavelmente). Mudei de Daniel para Dn.
   * Filemon não existe para o site, mudei para Filemom.
 
-* File "C:\Users\Davi Miranda\AppData\Local\Programs\Python\Python38-32\lib\urllib\request.py", line 1322, in do_open raise URLError(err) urllib.error.URLError: <urlopen error [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto>
+* File "C:\Users\Davi Miranda\AppData\Local\Programs\Python\Python38-32\lib\urllib\request.py", line 1322, in do_open raise URLError(err) urllib.error.URLError: \<urlopen error [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto>
   * É erro de conexão, reinicie o programa que deve funcionar, é problema da biblioteca requets urllib.
+
+*  File "c:\Users\Davi Miranda\Downloads\multimidia_igreja\USX Bible\main\Book.py", line 31, in getInfo unwantedTag.extract() AttributeError: 'NoneType' object has no attribute 'extract'
+    * Para gerar a Bíblia, eu uso o site https://www.bibliaonline.com.br/, mas a estrutura da página muda por cada versão, então as traduções riscadas estão *indisponíveis* no momento.
+    * A estrutura que muda é o copyright no final dos versos, que misturava e dava erro ao extrair algo que não existia (linha 30-31 do arquivo *Book*), apenas fiz uma condição (linhas 21-27 do arquivo *Book*) para ver se ele existe e a compatibilidade aumentou.

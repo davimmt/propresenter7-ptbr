@@ -15,7 +15,16 @@ class Book:
         soup = BeautifulSoup(content, 'html.parser')
 
         ## Get verses Text
-        verseRaw = soup.find('article').find('div').find('div').find_all('p')
+        verseBody = soup.find('article').find('div').find('div')
+        verseRaw = verseBody.find_all('p')
+
+        try:
+            copyRight = verseBody.find('p', attrs={"class":"MuiTypography-body2"})
+        except:
+            copyRight = None
+
+        if copyRight:
+            verseRaw.pop()
 
         for i in range(0, len(verseRaw)):
             unwantedTag = verseRaw[i].find('sup')
