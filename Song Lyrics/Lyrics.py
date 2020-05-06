@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import urllib
+import re
 
 class Lyrics:
     def getLyrics(self, url): # Pegar as informações da música escolhida do site letra.mus.br
@@ -8,55 +9,28 @@ class Lyrics:
         content = request.read()
         soup = BeautifulSoup(content, 'html.parser')
 
-        div = soup.find('div', attrs={"class":"cnt-letra"})
+        head = soup.find('div', attrs={"class":"cnt-head_title"})
+        body = soup.find('div', attrs={"class":"cnt-letra"})
 
-        title = soup.find_all('h1')[1].text
-        author = soup.find_all('h2')[0].text
-        author = author.replace('  ', '')
+        title = head.find('h1').text
+        author = head.find('h2').text.strip()
+        lyric = body.find_all('p')
 
         lyrics = []
-
-        for p in div:
-            lyrics.append(str(p))
-
-        return title, author, self.FormatLyrics(lyrics), self.FormatLyricsPropresenter7(lyrics)
+        for p in lyric:
+            lyrics.append(str(p)) 
+        
+        return title, author, self.formatLyrics(lyrics)
     
-    def FormatLyricsPropresenter7(self, lyrics): # Formatar a letra da música para gerar o arquivo pro ProPresenter 7
-        processedLyrics = []
-
-        for p in lyrics:
-            openTag = p.replace('<p>', '')
-            closeTag = openTag.replace('</p>', '')
-            brTag = closeTag.replace('<br>', 'LB')
-            uniqueBrTag = brTag.replace('<br/>', 'LB')
-            closeBrTag = uniqueBrTag.replace('</br>', '')
-            processedLyrics.append(closeBrTag)
-        processedLyrics = processedLyrics[1:-1]
-        lastParagraph = processedLyrics[-1].replace('\n\n', '')
-        processedLyrics.pop()
-        processedLyrics.append(lastParagraph)
-
+    def formatLyrics(self, lyrics): # O código do site impossibilita a formatação com o próprio BS4
         formatedLyrics = []
-
-        for item in processedLyrics: # Dividir o array em parágrafos e quebras de linha
-            splitted = item.split('LB')
-            formatedLyrics.append(splitted)
-
-        return formatedLyrics
-    
-    def FormatLyrics(self, lyrics): # Formatar a letra da música para gerar o arquivo pro ProPresenter 6 e pro PowerPoint
-        formatedLyrics = []
-
-        for p in lyrics:
-            openTag = p.replace('<p>', '')
-            closeTag = openTag.replace('</p>', '\n\n')
-            brTag = closeTag.replace('<br>', '\n')
-            uniqueBrTag = brTag.replace('<br/>', '\n')
-            closeBrTag = uniqueBrTag.replace('</br>', '')
-            formatedLyrics.append(closeBrTag)
-        formatedLyrics = formatedLyrics[1:-1]
-        lastParagraph = formatedLyrics[-1].replace('\n\n', '')
-        formatedLyrics.pop()
-        formatedLyrics.append(lastParagraph)
+        for tags in lyrics:
+            whiteSpace = re.sub('<p>|</br>', '', tags)
+            lineBreak = re.sub('<br>|<br/>', '\n', whiteSpace)
+            paragraphBreak = lineBreak.replace('</p>', '\n\n')
+            formatedLyrics.append(paragraphBreak)
+        lastParagraph = formatedLyrics[-1] # Guardar último parágrafo na variável
+        formatedLyrics.pop() # Remover último parágrafo do array
+        formatedLyrics.append(lastParagraph.replace('\n\n', '')) # Inserir último parágrafo no array, agora, sem a quebra de parágrafo (\n\n) no final
         
         return formatedLyrics

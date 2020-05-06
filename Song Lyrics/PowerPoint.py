@@ -18,10 +18,6 @@ class PowerPoint:
         ts = shape.fill._xPr.solidFill
         sF = ts.get_or_change_to_srgbClr()
         self.SubElement(sF, 'a:alpha', val=str(alpha))
-    
-    # def _set_p_border(self, paragraph):
-    #     element = paragraph._p
-        # print(element.text)
 
     def generatePptx(self, title, author, lyrics):
         left = top = 0
@@ -122,17 +118,3 @@ class PowerPoint:
         pptx.save(fileName)
 
         return fileName
-
-    # def generateDocx(self, title, author, lyrics):
-    #     fileName = (title + " - " + author + " (PowerPoint).docx")
-    #     document = Document()
-    #     font = document.styles['Normal'].font
-    #     font.name = 'Calibri (corpo)'
-    #     font.bold = True
-    #     font.shadow = True
-    #     document.add_paragraph(title + "\n" + author)
-    #     for p in range(len(lyrics)):
-    #         document.add_paragraph(lyrics[p].replace('\n\n', ''))
-    #     document.save(fileName)
-
-    #     return fileName

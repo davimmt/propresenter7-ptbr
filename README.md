@@ -4,10 +4,11 @@ Se você quiser a Bíblia em português para usar no ProPresenter 7 (não sei so
 
 As versões de tradução podem ser:
 * Almeida Corrigida Fiel (ACF)
-* Almeida Revista e Atualizada (ARA)
-* Almeida Revista e Corrigida (ARC)
 * Nova Versão Internacional (NVI)
-  * Ou qualquer uma suportada pelo site https://www.bibliaonline.com.br/
+* ~Almeida Revista e Atualizada (ARA)~
+* ~Almeida Revista e Corrigida (ARC)~
+* ~Nova Almeida Atualizada (NAA)~
+  * Para gerar a Bíblia, eu uso o site https://www.bibliaonline.com.br/, mas a estrutura da página muda por cada versão, então as traduções riscadas estão *indisponíveis* no momento.
   
 ---
 
@@ -32,8 +33,9 @@ As versões de tradução podem ser:
   - [unidecode](https://pypi.org/project/Unidecode/)
   - [requests](https://requests.readthedocs.io/en/latest/)
   - [urllib 3](https://docs.python.org/3/library/urllib.html)
-  - [python-docx](https://python-docx.readthedocs.io/en/latest/)
-  - [python-pptx](https://python-pptx.readthedocs.io/en/latest/)
+  - [re](https://docs.python.org/3/library/re.html)
+  - [python-docx](https://python-docx.readthedocs.io/en/latest/) (somente para *Song Lyrics*)
+  - [python-pptx](https://python-pptx.readthedocs.io/en/latest/) (somente para *Song Lyrics*)
 
 ---
 
@@ -44,10 +46,9 @@ Song Lyrics é um programa responsável por ~facilitar a vida de quem faz muito 
 
 **A URL tem que ser do site letras.mus.br.**
 
-Ele gera 3 arquivos:
+Ele gera 2 arquivos:
   - .pptx => Apresentação de Slides em PowerPoint
-  - .docx => Arquivo de importação para o ProPresenter 7
-  - .txt => Arquivo de importação para o ProPresenter 6
+  - .txt => Arquivo de importação para o ProPresenter 7
 
 ---
 
@@ -75,7 +76,8 @@ USX Bible é responsável por gerar uma Bíblia em Portugês para o ProPresenter
   
 ![](USX%20Bible/img/usxbible_02.png)
 
-4. Agora basta extrair o arquivo compactado que eu vos enviei/enviarei dentro da pasta gerada e substituir tudo no processo.
+4. Agora basta extrair o arquivo compactado que eu vos enviei/enviarei, ou os que você mesmo gerou, dentro da pasta gerada e substituir tudo no processo.
+    * **Apenas envio a pasta USX com um arquivo de texto, extraia e substitua apenas a pasta e leia o arquivo para mais intruções!**
 
 ![](USX%20Bible/img/usxbible_03.png)
 
