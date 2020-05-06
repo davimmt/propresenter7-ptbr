@@ -79,6 +79,7 @@ USX Bible é responsável por gerar uma Bíblia em Portugês para o ProPresenter
 
 4. Agora basta extrair o arquivo compactado que eu vos enviei/enviarei, ou os que você mesmo gerou, dentro da pasta gerada e substituir tudo no processo.
     * **Apenas envio a pasta USX com um arquivo de texto, extraia e substitua apenas a pasta e leia o arquivo para mais intruções!**
+    * Caso você tenha gerado por si mesmo usando meu programa, é só copiar e substituir os arquivos gerados para a pasta USX.
 
 ![](USX%20Bible/img/usxbible_03.png)
 
