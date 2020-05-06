@@ -146,3 +146,14 @@ fileName = Book().getInfo("https://www.bibliaonline.com.br/acf/" + Bible().getBo
   
  * Exemplo: [Isaías 51:6](https://biblia.blog.br/acf/livro/isaias/51/6) está com o versículo incompleto (e vários outros). É problema com o site, não com o programa em si. Aparentemente o site não percebeu que os versículos longos estão com um limite de caracteres.
   * Resolvido trocando para o site https://www.bibliaonline.com.br/.
+  
+* File "C:\Users\Davi Miranda\AppData\Local\Programs\Python\Python38-32\lib\http\client.py", line 1183, in _validate_ path raise InvalidURL(f"URL can't contain control characters. {url!r} " http.client.InvalidURL: URL can't contain control characters. '/acf/1 samuel/1' (found at least ' ')
+  * Resolvido ao retornar com *.replace(' ', '')* na linha 218 do arquivo Bible.
+
+* File "C:\Users\Davi Miranda\AppData\Local\Programs\Python\Python38-32\lib\urllib\request.py", line 649, in http_error_default raise HTTPError(req.full_url, code, msg, hdrs, fp) urllib.error.HTTPError: HTTP Error 404: Not Found
+  * O site entende o retorno de Jó do array como jo (João). Mudei de Jó para Jób.
+  * O site entende o retorno de Daniel do array como danth (bug, provavelmente). Mudei de Daniel para Dn.
+  * Filemon não existe para o site, mudei para Filemom.
+
+* File "C:\Users\Davi Miranda\AppData\Local\Programs\Python\Python38-32\lib\urllib\request.py", line 1322, in do_open raise URLError(err) urllib.error.URLError: <urlopen error [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto>
+  * É erro de conexão, reinicie o programa que deve funcionar, é problema da biblioteca requets urllib.
