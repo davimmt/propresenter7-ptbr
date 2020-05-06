@@ -164,7 +164,7 @@ class Bible:
             "Esdras",
             "Neemias",
             "Ester",
-            "Jó",
+            "Jób",
             "Salmos",
             "Provérbios",
             "Eclesiastes",
@@ -173,7 +173,7 @@ class Bible:
             "Jeremias",
             "Lamentações",
             "Ezequiel",
-            "Daniel",
+            "Dn",
             "Oséias",
             "Joel",
             "Amós",
@@ -203,7 +203,7 @@ class Bible:
             "1 Timóteo",
             "2 Timóteo",
             "Tito",
-            "Filemon",
+            "Filemom",
             "Hebreus",
             "Tiago",
             "1 Pedro",
@@ -215,7 +215,7 @@ class Bible:
             "Apocalipse",
         ]
 
-        return unidecode(booksPtBrName[i]).lower()
+        return unidecode(booksPtBrName[i]).lower().replace(" ", "")
     
     def getbooksChapterNumber(self, i):
         booksChapterNumber = [
