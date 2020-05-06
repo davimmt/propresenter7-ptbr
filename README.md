@@ -1,6 +1,6 @@
 ### Sobre a Bíblia na versão Português do Brasil para o ProPresenter 7
 
-Se você quiser a Bíblia em português para usar no ProPresenter 7 (não sei sobre a compatibilidade em outras versões), mande um email para mirandadavi.mt@gmail.com que eu te envio os arquivos da Bíblia compactados. Mais informações abaixo.
+Se você quiser a Bíblia em português para usar no ProPresenter 7 (não sei sobre a compatibilidade em outras versões) e não souber usar o programa que eu fiz, mande um email para mirandadavi.mt@gmail.com que eu te envio os arquivos da Bíblia compactados. Mais informações abaixo.
 
 As versões de tradução podem ser:
 * Almeida Corrigida Fiel (ACF)
@@ -109,346 +109,215 @@ USX Bible é responsável por gerar uma Bíblia em Portugês para o ProPresenter
     <book code="GEN">
         <long>Genesis</long>
         <short>Genesis</short>
-        <abbr>Genesis</abbr>
+        <abbr>Gen</abbr>
     </book>
     ...
 </bookNames>
 ```
 
   * O *book code* é o nome do arquivo .usx que ele vai procurar na pasta USX.
-  * O *long*, *short* e *abbr* são o nome que aparece para selecionar no menu Bible do ProPresenter e na referência do slide.
+  * O *short* é o nome que aparece para selecionar no menu Bible do ProPresenter e na referência do slide.
+  * O *long* e o *abbr* eu não faço ideia.
   * Basta substituir a tag \<bookNames> com isso:
 ```
 <bookNames>
     <book code="GEN">
-        <long>Gênesis</long>
         <short>Gênesis</short>
-        <abbr>Gênesis</abbr>
     </book>
     <book code="EXO">
-        <long>Êxodo</long>
         <short>Êxodo</short>
-        <abbr>Êxodo</abbr>
     </book>
     <book code="LEV">
-        <long>Levítico</long>
         <short>Levítico</short>
-        <abbr>Levítico</abbr>
     </book>
     <book code="NUM">
-        <long>Números</long>
         <short>Números</short>
-        <abbr>Números</abbr>
     </book>
     <book code="DEU">
-        <long>Deuteronômio</long>
         <short>Deuteronômio</short>
-        <abbr>Deuteronômio</abbr>
     </book>
     <book code="JOS">
-        <long>Josué</long>
         <short>Josué</short>
-        <abbr>Josué</abbr>
     </book>
     <book code="JDG">
-        <long>Juízes</long>
         <short>Juízes</short>
-        <abbr>Juízes</abbr>
     </book>
     <book code="RUT">
-        <long>Rute</long>
         <short>Rute</short>
-        <abbr>Rute</abbr>
     </book>
     <book code="1SA">
-        <long>1 Samuel</long>
         <short>1 Samuel</short>
-        <abbr>1 Samuel</abbr>
     </book>
     <book code="2SA">
-        <long>2 Samuel</long>
         <short>2 Samuel</short>
-        <abbr>2 Samuel</abbr>
     </book>
     <book code="1KI">
-        <long>1 Reis</long>
         <short>1 Reis</short>
-        <abbr>1 Reis</abbr>
     </book>
     <book code="2KI">
-        <long>2 Reis</long>
         <short>2 Reis</short>
-        <abbr>2 Reis</abbr>
     </book>
     <book code="1CH">
-        <long>1 Crônicas</long>
         <short>1 Crônicas</short>
-        <abbr>1 Crônicas</abbr>
     </book>
     <book code="2CH">
-        <long>2 Crônicas</long>
         <short>2 Crônicas</short>
-        <abbr>2 Crônicas</abbr>
     </book>
     <book code="EZR">
-        <long>Esdras</long>
         <short>Esdras</short>
-        <abbr>Esdras</abbr>
     </book>
     <book code="NEH">
-        <long>Neemias</long>
         <short>Neemias</short>
-        <abbr>Neemias</abbr>
     </book>
     <book code="EST">
-        <long>Ester</long>
         <short>Ester</short>
-        <abbr>Ester</abbr>
     </book>
     <book code="JOB">
-        <long>Jó</long>
         <short>Jó</short>
-        <abbr>Jó</abbr>
     </book>
     <book code="PSA">
-        <long>Salmos</long>
         <short>Salmos</short>
-        <abbr>Salmos</abbr>
     </book>
     <book code="PRO">
-        <long>Provérbios</long>
         <short>Provérbios</short>
-        <abbr>Provérbios</abbr>
     </book>
     <book code="ECC">
-        <long>Eclesiastes</long>
         <short>Eclesiastes</short>
-        <abbr>Eclesiastes</abbr>
     </book>
     <book code="SNG">
-        <long>Cântico dos Cânticos</long>
         <short>Cântico dos Cânticos</short>
-        <abbr>Cântico dos Cânticos</abbr>
     </book>
     <book code="ISA">
-        <long>Isaías</long>
         <short>Isaías</short>
-        <abbr>Isaías</abbr>
     </book>
     <book code="JER">
-        <long>Jeremias</long>
         <short>Jeremias</short>
-        <abbr>Jeremias</abbr>
     </book>
     <book code="LAM">
-        <long>Lamentações</long>
         <short>Lamentações</short>
-        <abbr>Lamentações</abbr>
     </book>
     <book code="EZK">
-        <long>Ezequiel</long>
         <short>Ezequiel</short>
-        <abbr>Ezequiel</abbr>
     </book>
     <book code="DAN">
-        <long>Daniel</long>
         <short>Daniel</short>
-        <abbr>Daniel</abbr>
     </book>
     <book code="HOS">
-        <long>Oséias</long>
         <short>Oséias</short>
-        <abbr>Oséias</abbr>
     </book>
     <book code="JOL">
-        <long>Joel</long>
         <short>Joel</short>
-        <abbr>Joel</abbr>
     </book>
     <book code="AMO">
-        <long>Amós</long>
         <short>Amós</short>
-        <abbr>Amós</abbr>
     </book>
     <book code="OBA">
-        <long>Abdias</long>
         <short>Abdias</short>
-        <abbr>Abdias</abbr>
     </book>
     <book code="JON">
-        <long>Jonas</long>
         <short>Jonas</short>
-        <abbr>Jonas</abbr>
     </book>
     <book code="MIC">
-        <long>Miquéias</long>
         <short>Miquéias</short>
-        <abbr>Miquéias</abbr>
     </book>
     <book code="NAM">
-        <long>Naum</long>
         <short>Naum</short>
-        <abbr>Naum</abbr>
     </book>
     <book code="HAB">
-        <long>Habacuc</long>
         <short>Habacuc</short>
-        <abbr>Habacuc</abbr>
     </book>
     <book code="ZEP">
-        <long>Sofonias</long>
         <short>Sofonias</short>
-        <abbr>Sofonias</abbr>
     </book>
     <book code="HAG">
-        <long>Ageu</long>
         <short>Ageu</short>
-        <abbr>Ageu</abbr>
     </book>
     <book code="ZEC">
-        <long>Zacarias</long>
         <short>Zacarias</short>
-        <abbr>Zacarias</abbr>
     </book>
     <book code="MAL">
-        <long>Malaquias</long>
         <short>Malaquias</short>
-        <abbr>Malaquias</abbr>
     </book>
     <book code="MAT">
-        <long>Mateus</long>
         <short>Mateus</short>
-        <abbr>Mateus</abbr>
     </book>
     <book code="MRK">
-        <long>Marcos</long>
         <short>Marcos</short>
-        <abbr>Marcos</abbr>
     </book>
     <book code="LUK">
-        <long>Lucas</long>
         <short>Lucas</short>
-        <abbr>Lucas</abbr>
     </book>
     <book code="JHN">
-        <long>João</long>
         <short>João</short>
-        <abbr>João</abbr>
     </book>
     <book code="ACT">
-        <long>Atos</long>
         <short>Atos</short>
-        <abbr>Atos</abbr>
     </book>
     <book code="ROM">
-        <long>Romanos</long>
         <short>Romanos</short>
-        <abbr>Romanos</abbr>
     </book>
     <book code="1CO">
-        <long>1 Coríntios</long>
         <short>1 Coríntios</short>
-        <abbr>1 Coríntios</abbr>
     </book>
     <book code="2CO">
-        <long>2 Coríntios</long>
         <short>2 Coríntios</short>
-        <abbr>2 Coríntios</abbr>
     </book>
     <book code="GAL">
-        <long>Gálatas</long>
         <short>Gálatas</short>
-        <abbr>Gálatas</abbr>
     </book>
     <book code="EPH">
-        <long>Efésios</long>
         <short>Efésios</short>
-        <abbr>Efésios</abbr>
     </book>
     <book code="PHP">
-        <long>Filipenses</long>
         <short>Filipenses</short>
-        <abbr>Filipenses</abbr>
     </book>
     <book code="COL">
-        <long>Colossenses</long>
         <short>Colossenses</short>
-        <abbr>Colossenses</abbr>
     </book>
     <book code="1TH">
-        <long>1 Tessalonicenses</long>
         <short>1 Tessalonicenses</short>
-        <abbr>1 Tessalonicenses</abbr>
     </book>
     <book code="2TH">
-        <long>2 Tessalonicenses</long>
         <short>2 Tessalonicenses</short>
-        <abbr>2 Tessalonicenses</abbr>
     </book>
     <book code="1TI">
-        <long>1 Timóteo</long>
         <short>1 Timóteo</short>
-        <abbr>1 Timóteo</abbr>
     </book>
     <book code="2TI">
-        <long>2 Timóteo</long>
         <short>2 Timóteo</short>
-        <abbr>2 Timóteo</abbr>
     </book>
     <book code="TIT">
-        <long>Tito</long>
         <short>Tito</short>
-        <abbr>Tito</abbr>
     </book>
     <book code="PHM">
-        <long>Filemon</long>
         <short>Filemon</short>
-        <abbr>Filemon</abbr>
     </book>
     <book code="HEB">
-        <long>Hebreus</long>
         <short>Hebreus</short>
-        <abbr>Hebreus</abbr>
     </book>
     <book code="JAS">
-        <long>Tiago</long>
         <short>Tiago</short>
-        <abbr>Tiago</abbr>
     </book>
     <book code="1PE">
-        <long>1 Pedro</long>
         <short>1 Pedro</short>
-        <abbr>1 Pedro</abbr>
     </book>
     <book code="2PE">
-        <long>2 Pedro</long>
         <short>2 Pedro</short>
-        <abbr>2 Pedro</abbr>
     </book>
     <book code="1JN">
-        <long>1 João</long>
         <short>1 João</short>
-        <abbr>1 João</abbr>
     </book>
     <book code="2JN">
-        <long>2 João</long>
         <short>2 João</short>
-        <abbr>2 João</abbr>
     </book>
     <book code="3JN">
-        <long>3 João</long>
         <short>3 João</short>
-        <abbr>3 João</abbr>
     </book>
     <book code="JUD">
-        <long>Judas</long>
         <short>Judas</short>
-        <abbr>Judas</abbr>
     </book>
     <book code="REV">
-        <long>Apocalipse</long>
         <short>Apocalipse</short>
-        <abbr>Apocalipse</abbr>
     </book>
 </bookNames>
 ```
