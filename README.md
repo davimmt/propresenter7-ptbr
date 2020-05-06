@@ -19,6 +19,7 @@ As versões de tradução podem ser:
 * Sobre *USX Bible, o Gerador de Bíblias*
   * Passo a passo de como instalar a Bíblia (na tradução português do Brasil)
   * Como funciona
+  * O que fazer depois da instalação (opcional)
   * Histórico de problemas
 
 ---
@@ -82,21 +83,24 @@ USX Bible é responsável por gerar uma Bíblia em Portugês para o ProPresenter
 
 ![](USX%20Bible/img/usxbible_04.png)
 
-#### Como funciona
+#### O que fazer depois da instalação (opcional)
 
-* Para trocar a tradução, vá na linha 54 do arquivo *USX Biblie/main/generateUSXBible*:
-  * Aonde tem o link *"https://www.bibliaonline.com.br/acf/*" troque o *acf* pelas as versões suportadas da página.
-```
-fileName = Book().getInfo("https://www.bibliaonline.com.br/acf/" + Bible().getBooksPtBRName(i) + "/" + str(j), Bible().getBooksName(i), Bible().getBooksAbbreviation(i))
-```
+**Esse tópico foi criado porque há um bug caso você queira usar 2 traduções em português diferente e, consequentemente, ter que baixar duas Bíblias grátis em outra língua diferente. Não se pode usar o mesmo *rvmetadata* ou causará um bug visual de entrada dupla na seleção.**
+
+**Não encontrei problemas em usar o mesmo *metadata* (ele serve pra tradução do nome dos livros na seleção), mas por questão de organização e boa prática, não estarei botando ele nos arquivos que estarei enviando a partir de agora. Abaixo ensino como traduzir esses nomes.**
 
 * Para mudar o título que você seleciona no menu Bible do ProPresenter, vá no arquivo rvmetadata.xml e altere aqui: 
 ```
 <name>King James Version</name>
 ```
-  * Não recomendo mudar o *\<abbreviation>KJV\</abbreviation>*, pois causa entrada dupla na seleção de versão, aparentemente. Não é ele que muda o texto da Display Translation, nem procurei achar qual muda.
 
-* No arquivo metadata.xml temos os nomes dos livros:
+* Para mudar a abreviação que aparece no slide (com a opção Display Translation ativada), vá no arquivo rvmetadata.xml e altere aqui:
+  * Se essa linha não existir, apenas adicione ela após a linha do \<name>\</name> (mencionada no item acima).
+```
+<displayAbbreviation>KJV</displayAbbreviation>
+```
+
+* No arquivo *metadata.xml* temos os nomes dos livros:
 ```  
 <bookNames>
     <book code="GEN">
@@ -110,6 +114,349 @@ fileName = Book().getInfo("https://www.bibliaonline.com.br/acf/" + Bible().getBo
 
   * O *book code* é o nome do arquivo .usx que ele vai procurar na pasta USX.
   * O *long*, *short* e *abbr* são o nome que aparece para selecionar no menu Bible do ProPresenter e na referência do slide.
+  * Basta substituir a tag \<bookNames> com isso:
+```
+<bookNames>
+    <book code="GEN">
+        <long>Gênesis</long>
+        <short>Gênesis</short>
+        <abbr>Gênesis</abbr>
+    </book>
+    <book code="EXO">
+        <long>Êxodo</long>
+        <short>Êxodo</short>
+        <abbr>Êxodo</abbr>
+    </book>
+    <book code="LEV">
+        <long>Levítico</long>
+        <short>Levítico</short>
+        <abbr>Levítico</abbr>
+    </book>
+    <book code="NUM">
+        <long>Números</long>
+        <short>Números</short>
+        <abbr>Números</abbr>
+    </book>
+    <book code="DEU">
+        <long>Deuteronômio</long>
+        <short>Deuteronômio</short>
+        <abbr>Deuteronômio</abbr>
+    </book>
+    <book code="JOS">
+        <long>Josué</long>
+        <short>Josué</short>
+        <abbr>Josué</abbr>
+    </book>
+    <book code="JDG">
+        <long>Juízes</long>
+        <short>Juízes</short>
+        <abbr>Juízes</abbr>
+    </book>
+    <book code="RUT">
+        <long>Rute</long>
+        <short>Rute</short>
+        <abbr>Rute</abbr>
+    </book>
+    <book code="1SA">
+        <long>1 Samuel</long>
+        <short>1 Samuel</short>
+        <abbr>1 Samuel</abbr>
+    </book>
+    <book code="2SA">
+        <long>2 Samuel</long>
+        <short>2 Samuel</short>
+        <abbr>2 Samuel</abbr>
+    </book>
+    <book code="1KI">
+        <long>1 Reis</long>
+        <short>1 Reis</short>
+        <abbr>1 Reis</abbr>
+    </book>
+    <book code="2KI">
+        <long>2 Reis</long>
+        <short>2 Reis</short>
+        <abbr>2 Reis</abbr>
+    </book>
+    <book code="1CH">
+        <long>1 Crônicas</long>
+        <short>1 Crônicas</short>
+        <abbr>1 Crônicas</abbr>
+    </book>
+    <book code="2CH">
+        <long>2 Crônicas</long>
+        <short>2 Crônicas</short>
+        <abbr>2 Crônicas</abbr>
+    </book>
+    <book code="EZR">
+        <long>Esdras</long>
+        <short>Esdras</short>
+        <abbr>Esdras</abbr>
+    </book>
+    <book code="NEH">
+        <long>Neemias</long>
+        <short>Neemias</short>
+        <abbr>Neemias</abbr>
+    </book>
+    <book code="EST">
+        <long>Ester</long>
+        <short>Ester</short>
+        <abbr>Ester</abbr>
+    </book>
+    <book code="JOB">
+        <long>Jó</long>
+        <short>Jó</short>
+        <abbr>Jó</abbr>
+    </book>
+    <book code="PSA">
+        <long>Salmos</long>
+        <short>Salmos</short>
+        <abbr>Salmos</abbr>
+    </book>
+    <book code="PRO">
+        <long>Provérbios</long>
+        <short>Provérbios</short>
+        <abbr>Provérbios</abbr>
+    </book>
+    <book code="ECC">
+        <long>Eclesiastes</long>
+        <short>Eclesiastes</short>
+        <abbr>Eclesiastes</abbr>
+    </book>
+    <book code="SNG">
+        <long>Cântico dos Cânticos</long>
+        <short>Cântico dos Cânticos</short>
+        <abbr>Cântico dos Cânticos</abbr>
+    </book>
+    <book code="ISA">
+        <long>Isaías</long>
+        <short>Isaías</short>
+        <abbr>Isaías</abbr>
+    </book>
+    <book code="JER">
+        <long>Jeremias</long>
+        <short>Jeremias</short>
+        <abbr>Jeremias</abbr>
+    </book>
+    <book code="LAM">
+        <long>Lamentações</long>
+        <short>Lamentações</short>
+        <abbr>Lamentações</abbr>
+    </book>
+    <book code="EZK">
+        <long>Ezequiel</long>
+        <short>Ezequiel</short>
+        <abbr>Ezequiel</abbr>
+    </book>
+    <book code="DAN">
+        <long>Daniel</long>
+        <short>Daniel</short>
+        <abbr>Daniel</abbr>
+    </book>
+    <book code="HOS">
+        <long>Oséias</long>
+        <short>Oséias</short>
+        <abbr>Oséias</abbr>
+    </book>
+    <book code="JOL">
+        <long>Joel</long>
+        <short>Joel</short>
+        <abbr>Joel</abbr>
+    </book>
+    <book code="AMO">
+        <long>Amós</long>
+        <short>Amós</short>
+        <abbr>Amós</abbr>
+    </book>
+    <book code="OBA">
+        <long>Abdias</long>
+        <short>Abdias</short>
+        <abbr>Abdias</abbr>
+    </book>
+    <book code="JON">
+        <long>Jonas</long>
+        <short>Jonas</short>
+        <abbr>Jonas</abbr>
+    </book>
+    <book code="MIC">
+        <long>Miquéias</long>
+        <short>Miquéias</short>
+        <abbr>Miquéias</abbr>
+    </book>
+    <book code="NAM">
+        <long>Naum</long>
+        <short>Naum</short>
+        <abbr>Naum</abbr>
+    </book>
+    <book code="HAB">
+        <long>Habacuc</long>
+        <short>Habacuc</short>
+        <abbr>Habacuc</abbr>
+    </book>
+    <book code="ZEP">
+        <long>Sofonias</long>
+        <short>Sofonias</short>
+        <abbr>Sofonias</abbr>
+    </book>
+    <book code="HAG">
+        <long>Ageu</long>
+        <short>Ageu</short>
+        <abbr>Ageu</abbr>
+    </book>
+    <book code="ZEC">
+        <long>Zacarias</long>
+        <short>Zacarias</short>
+        <abbr>Zacarias</abbr>
+    </book>
+    <book code="MAL">
+        <long>Malaquias</long>
+        <short>Malaquias</short>
+        <abbr>Malaquias</abbr>
+    </book>
+    <book code="MAT">
+        <long>Mateus</long>
+        <short>Mateus</short>
+        <abbr>Mateus</abbr>
+    </book>
+    <book code="MRK">
+        <long>Marcos</long>
+        <short>Marcos</short>
+        <abbr>Marcos</abbr>
+    </book>
+    <book code="LUK">
+        <long>Lucas</long>
+        <short>Lucas</short>
+        <abbr>Lucas</abbr>
+    </book>
+    <book code="JHN">
+        <long>João</long>
+        <short>João</short>
+        <abbr>João</abbr>
+    </book>
+    <book code="ACT">
+        <long>Atos</long>
+        <short>Atos</short>
+        <abbr>Atos</abbr>
+    </book>
+    <book code="ROM">
+        <long>Romanos</long>
+        <short>Romanos</short>
+        <abbr>Romanos</abbr>
+    </book>
+    <book code="1CO">
+        <long>1 Coríntios</long>
+        <short>1 Coríntios</short>
+        <abbr>1 Coríntios</abbr>
+    </book>
+    <book code="2CO">
+        <long>2 Coríntios</long>
+        <short>2 Coríntios</short>
+        <abbr>2 Coríntios</abbr>
+    </book>
+    <book code="GAL">
+        <long>Gálatas</long>
+        <short>Gálatas</short>
+        <abbr>Gálatas</abbr>
+    </book>
+    <book code="EPH">
+        <long>Efésios</long>
+        <short>Efésios</short>
+        <abbr>Efésios</abbr>
+    </book>
+    <book code="PHP">
+        <long>Filipenses</long>
+        <short>Filipenses</short>
+        <abbr>Filipenses</abbr>
+    </book>
+    <book code="COL">
+        <long>Colossenses</long>
+        <short>Colossenses</short>
+        <abbr>Colossenses</abbr>
+    </book>
+    <book code="1TH">
+        <long>1 Tessalonicenses</long>
+        <short>1 Tessalonicenses</short>
+        <abbr>1 Tessalonicenses</abbr>
+    </book>
+    <book code="2TH">
+        <long>2 Tessalonicenses</long>
+        <short>2 Tessalonicenses</short>
+        <abbr>2 Tessalonicenses</abbr>
+    </book>
+    <book code="1TI">
+        <long>1 Timóteo</long>
+        <short>1 Timóteo</short>
+        <abbr>1 Timóteo</abbr>
+    </book>
+    <book code="2TI">
+        <long>2 Timóteo</long>
+        <short>2 Timóteo</short>
+        <abbr>2 Timóteo</abbr>
+    </book>
+    <book code="TIT">
+        <long>Tito</long>
+        <short>Tito</short>
+        <abbr>Tito</abbr>
+    </book>
+    <book code="PHM">
+        <long>Filemon</long>
+        <short>Filemon</short>
+        <abbr>Filemon</abbr>
+    </book>
+    <book code="HEB">
+        <long>Hebreus</long>
+        <short>Hebreus</short>
+        <abbr>Hebreus</abbr>
+    </book>
+    <book code="JAS">
+        <long>Tiago</long>
+        <short>Tiago</short>
+        <abbr>Tiago</abbr>
+    </book>
+    <book code="1PE">
+        <long>1 Pedro</long>
+        <short>1 Pedro</short>
+        <abbr>1 Pedro</abbr>
+    </book>
+    <book code="2PE">
+        <long>2 Pedro</long>
+        <short>2 Pedro</short>
+        <abbr>2 Pedro</abbr>
+    </book>
+    <book code="1JN">
+        <long>1 João</long>
+        <short>1 João</short>
+        <abbr>1 João</abbr>
+    </book>
+    <book code="2JN">
+        <long>2 João</long>
+        <short>2 João</short>
+        <abbr>2 João</abbr>
+    </book>
+    <book code="3JN">
+        <long>3 João</long>
+        <short>3 João</short>
+        <abbr>3 João</abbr>
+    </book>
+    <book code="JUD">
+        <long>Judas</long>
+        <short>Judas</short>
+        <abbr>Judas</abbr>
+    </book>
+    <book code="REV">
+        <long>Apocalipse</long>
+        <short>Apocalipse</short>
+        <abbr>Apocalipse</abbr>
+    </book>
+</bookNames>
+```
+
+#### Como funciona
+
+* Para trocar a tradução, vá na linha 54 do arquivo *USX Biblie/main/generateUSXBible*:
+  * Aonde tem o link *"https://www.bibliaonline.com.br/acf/*" troque o *acf* pelas as versões suportadas da página.
+```
+fileName = Book().getInfo("https://www.bibliaonline.com.br/acf/" + Bible().getBooksPtBRName(i) + "/" + str(j), Bible().getBooksName(i), Bible().getBooksAbbreviation(i))
+```
 
 * Cada livro da Bíblia tem um arquivo na pasta USX, são eles que estaremos traduzindo. Esse é o formato:
 ```
