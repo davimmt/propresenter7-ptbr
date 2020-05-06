@@ -491,7 +491,7 @@ fileName = Book().getInfo("https://www.bibliaonline.com.br/acf/" + Bible().getBo
 * Livros enumerados como 1CO/2CO ou 1TI/2TI têm seus versos de acordo com sua numeração, no qual o primeiro dígito da esquerda corresponde a numeração do livro e os demais da direita ao versículo, isto é, 1CO:11, 12, 13; 2CO:21, 22, 23.
   * Resolvido na linha 10, para pegar o número do capítulo eu extraio todos os números da URL, mas isso significa extrair também os números do livro, caso tenham (1-reis, 1-corintios), então, ao pegar o capitulo da url, usar o sufixo [-3:] na string, para considerar apenas os 3 últimos caracteres.
   
- * Exemplo: [Isaías 51:6](https://biblia.blog.br/acf/livro/isaias/51/6) está com o versículo incompleto (e vários outros). É problema com o site, não com o programa em si. Aparentemente o site não percebeu que os versículos longos estão com um limite de caracteres.
+* Exemplo: [Isaías 51:6](https://biblia.blog.br/acf/livro/isaias/51/6) está com o versículo incompleto (e vários outros). É problema com o site, não com o programa em si. Aparentemente o site não percebeu que os versículos longos estão com um limite de caracteres.
   * Resolvido trocando para o site https://www.bibliaonline.com.br/.
   
 * File "C:\Users\Davi Miranda\AppData\Local\Programs\Python\Python38-32\lib\http\client.py", line 1183, in _validate_ path raise InvalidURL(f"URL can't contain control characters. {url!r} " http.client.InvalidURL: URL can't contain control characters. '/acf/1 samuel/1' (found at least ' ')
