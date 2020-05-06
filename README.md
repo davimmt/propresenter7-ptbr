@@ -17,9 +17,10 @@ As versões de tradução podem ser:
 * Dependências
 * Sobre *Song Lyrics, o Gerador de Hinos*
   * ~Como funciona (não feito ainda)~
+  * ~Histórico de problemas (não feito ainda)~
 * Sobre *USX Bible, o Gerador de Bíblias*
   * Passo a passo de como instalar a Bíblia (na tradução português do Brasil)
-  * Como funciona
+  * Como funciona (incompleto)
   * O que fazer depois da instalação (opcional)
   * Histórico de problemas
 
@@ -454,13 +455,7 @@ USX Bible é responsável por gerar uma Bíblia em Portugês para o ProPresenter
 
 #### Como funciona
 
-* Para trocar a tradução, vá na linha 54 do arquivo *USX Biblie/main/generateUSXBible*:
-  * Aonde tem o link *"https://www.bibliaonline.com.br/acf/*" troque o *acf* pelas as versões suportadas da página.
-```
-fileName = Book().getInfo("https://www.bibliaonline.com.br/acf/" + Bible().getBooksPtBRName(i) + "/" + str(j), Bible().getBooksName(i), Bible().getBooksAbbreviation(i))
-```
-
-* Cada livro da Bíblia tem um arquivo na pasta USX, são eles que estaremos traduzindo. Esse é o formato:
+* Cada livro da Bíblia tem um arquivo na pasta USX, são eles que estaremos traduzindo (extraindo do site mencionado, na verdade). Esse é o formato:
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <usx version="2.0">
