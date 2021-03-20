@@ -57,6 +57,7 @@ class PowerPoint:
         txBox = slide.shapes.add_textbox(left, top, width, height)
         tf = txBox.text_frame
         tf.vertical_anchor = MSO_ANCHOR.MIDDLE
+        tf.word_wrap = True
 
         #
         ## Escrever o título da música e definir as características do seu texto
@@ -76,6 +77,7 @@ class PowerPoint:
         p.font.italic = True
         p.font.size = Pt(50)
         p.alignment = PP_ALIGN.CENTER
+        p.word_wrap = True
         p.font.color.rgb = RGBColor(255,255,255)
 
         for i in range(len(lyrics)): # Adicionar um slide novo para cada parágrafo da letra da música
@@ -106,11 +108,13 @@ class PowerPoint:
             txBox = slide.shapes.add_textbox(left, top, width, height)
             tf = txBox.text_frame
             tf.vertical_anchor = MSO_ANCHOR.MIDDLE
+            tf.word_wrap = True
 
             #
             ## Escrever o parágrafo no slide e definir a característica do texto
             p = tf.paragraphs[0]
             p.alignment = PP_ALIGN.CENTER
+            p.word_wrap = True
             p.text = lyrics[i].replace('\n\n', '')
             p.font.bold = True
             p.font.size = Pt(60)
