@@ -15,26 +15,19 @@ class Book:
         soup = BeautifulSoup(content, 'html.parser')
 
         ## Get verses Text
-        verseBody = soup.find('article').find('div').find('div')
-        verseRaw = verseBody.find_all('p')
+        verseBody = soup.find('article').find('div', class_='verseByVerse')
+        verseRaw = verseBody.find_all('span', class_='t')
 
-        try:
-            copyRight = verseBody.find('p', attrs={"class":"MuiTypography-body2"})
-        except:
-            copyRight = None
-
-        if copyRight:
-            verseRaw.pop()
-
+        verses = {}
         for i in range(0, len(verseRaw)):
-            unwantedTag = verseRaw[i].find('sup')
-            unwantedTag.extract()
+            verse_num = ''.join(i for i in verseRaw[i].get('data-v') if i.isdigit())
 
-        verse = []
-        for i in range(0, len(verseRaw)):
-            verse.append(verseRaw[i].text.lstrip())
+            if verse_num not in verses:
+                verses[verse_num] = ""
 
-        return self.generateUSX(chapter, verse, author, abbr)
+            verses[verse_num] += " " + verseRaw[i].text.lstrip()
+
+        return self.generateUSX(chapter, verses, author, abbr)
 
     def generateUSX(self, chapter, verses, author, abbr):
         fileName = abbr + ".usx"
@@ -49,10 +42,10 @@ class Book:
 
             file.write('\n    <chapter number="' + chapter + '" style="c" />\n')
 
-            for numVerse, verse in enumerate(verses):
+            for verse_num, verse in verses.items():
                 file.write(
                 '       <para style="p">\n'
-                '           <verse number="' + str(numVerse + 1) + '" style="v" />' + verse + '</para>\n'
+                '           <verse number="' + str(verse_num) + '" style="v" />' + verse + '</para>\n'
                 )
 
         return fileName
