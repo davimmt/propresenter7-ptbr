@@ -1,6 +1,6 @@
 ### Sobre a Bíblia na versão Português do Brasil para o ProPresenter 7
 
-Se você quiser a Bíblia em português para usar no ProPresenter 7 (não sei sobre a compatibilidade em outras versões) e não souber usar o programa que eu fiz, mande um email para mirandadavi.mt@gmail.com que eu te envio os arquivos da Bíblia compactados. Mais informações abaixo.
+Se você quiser a Bíblia em português para usar no ProPresenter 7 (não sei sobre a compatibilidade em outras versões), [clique aqui](#passo-a-passo-de-como-instalar-a-bíblia) para ler o passo a passo. Precisando de ajuda, mande um email para mirandadavi.mt@gmail.com que posso te ajudar. Mais informações abaixo.
 
 As versões de tradução podem ser:
 * Almeida Corrigida Fiel (ACF)
@@ -61,6 +61,20 @@ USX Bible é responsável por gerar uma Bíblia em Portugês para o ProPresenter
 **Como eu já gerei, apenas me envie um e-mail (mirandadavi.mt@gmail.com) e eu contentemente enviá-lo-ei a Bíblia compactada.**
 
 #### Passo a passo de como instalar a Bíblia:
+
+0. Gere a versão desejada ou escolha uma das que já gerei:
+  - [Almeida Corrigida Fiel (ACF)](https://github.com/davimmt/propresenter7-ptbr/blob/master/biblia-acf-propresenter7.rar)
+  - [Almeida Revista e Atualizada (ARA)](https://github.com/davimmt/propresenter7-ptbr/blob/master/biblia-ara-propresenter7.rar)
+  - [Almeida Revista e Corrigida (ARC)](https://github.com/davimmt/propresenter7-ptbr/blob/master/biblia-arc-propresenter7.zip)
+  - [Nova Almeida Atualizada (NAA)](https://github.com/davimmt/propresenter7-ptbr/blob/master/biblia-naa-propresenter7.rar)
+  - [Nova Tradução na Linguaguem de Hoje (NTLH)](https://github.com/davimmt/propresenter7-ptbr/blob/master/biblia-ntlh-propresenter7.zip)
+  - [Nova Versão Internacional (NVI)](https://github.com/davimmt/propresenter7-ptbr/blob/master/biblia-nvi-propresenter7.rar)
+  - [Nova Versão Transformadora (NVT)](https://github.com/davimmt/propresenter7-ptbr/blob/master/biblia-nvt-propresenter7.zip)
+  - [Tradução Brasileira (TB - SBB)](https://github.com/davimmt/propresenter7-ptbr/blob/master/biblia-sbb-propresenter7.zip)
+
+    Em seguida, baixe-a clicando neste botão:
+
+    ![](USX%20Bible/img/usxbible_000.png)
 
 1. Abra o ProPresenter e vá na aba de *Bible*, depois em *Options*, *Bible* novamente, *Free*, e, então, *Install* (de preferência na King James Version, pode ser qualquer uma que tenha o formato USX):
 
